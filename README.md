@@ -27,3 +27,19 @@ If Traktor is already running, TrakRun will latch onto the running instance inst
 new one; so if for whatever reason Traktor is running without TrakRun and you only find out because
 your screen turns off 30 minutes into your gig, you can fix this by adding TrakRun to the mix without
 having to restart Traktor.
+
+## CONFIGURATION
+
+TrakRun will by default look for a window titled `Traktor` and attempt to launch `Traktor.exe` if that
+window is not found. If your Traktor is named differently (as is the case with Traktor Pro 4 for
+example) this will fail, but TrakRun will write a `trakrun.ini` for you to modify. In there, set
+`ExeName` to Traktor's executable file name and `WindowTitle` to the window title when Traktor is
+running. For Traktor Pro 4 this looks like so:
+
+```
+[TrakRun]
+ExeName=Traktor Pro 4.exe
+WindowTitle=Traktor Pro 4
+```
+
+Of course this way you could launch any program in no-sleep mode, just sayin' :)
